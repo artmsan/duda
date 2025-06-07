@@ -7,31 +7,48 @@
 
   <style>
       body {
-    margin: 0;
-    padding: 0;
-    background-image: url('siteduda.jpg'); /* Imagem padrão (PC) */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    font-family: Arial, sans-serif;
+      background-image: url('siteduda.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 
-  @media (max-width: 768px) {
-    body {
-      background-image: url('fundo-celular.png'); /* Imagem para celular */
- }
+  @media (max-width: 600px) {
+  body {
+    background-image: url('fundo-celular.png'); /* Imagem para celular */
   }
+
+  .painel {
+    width: 90%;
+    padding: 30px 15px;
+    font-size: 14px;
+  }
+
+  .painel img {
+    width: 150px;
+  }
+
+  #sim, #não {
+    width: 50px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
     .painel {
       background-color: white;
-      margin: 30px auto;
       width: 90%;
       max-width: 500px;
+      height: auto;
       border-radius: 20px;
       text-align: center;
       padding: 40px 20px;
-      box-sizing: border-box;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
 
     #sim {
@@ -84,14 +101,35 @@
 <body>
 
   <div class="painel">
+
     <h1>Feliz Dia dos Namorados</h1>
+
     <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="ursinho apaixonado">
-    <h2>Aceita namorar comigo?</h2>
-    <button id="sim">Sim!</button>
-    <button id="não" onmouseover="fuja()">Não</button>
+
+    <h2>
+      Aceita namorar comigo?
+
+    </h2>
+
+    <button 
+    
+    id="sim">Sim!
+
+    </button>
+
+    <button id="não" onmouseover="fuja()">
+      
+      Não
+
+    </button>
+
     <div id="mensagem">
+
       <h2>💖 Eu te amo, minha princesa! 💖</h2>
+
+
     </div>
+
   </div>
 
   <script>
