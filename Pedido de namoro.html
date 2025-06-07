@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia Dos Namorados</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('siteduda.jpg'); /* Sua imagem de fundo local */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .painel {
+      background-color: white;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 20px;
+      text-align: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #sim {
+      position: relative;
+      margin-right: 10px;
+      height: 40px;
+      width: 80px;
+      background-color: red;
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    #não {
+      position: absolute;
+      height: 40px;
+      width: 80px;
+      background-color: red;
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    #mensagem {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #mensagem h2 {
+      color: red;
+      font-size: 24px;
+    }
+
+    @media (max-width: 600px) {
+      h1, h2 {
+        font-size: 20px;
+      }
+
+      #sim, #não {
+        width: 70px;
+        height: 35px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="painel">
+    <h1>Feliz Dia dos Namorados</h1>
+    <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="ursinho apaixonado">
+    <h2>Aceita namorar comigo?</h2>
+    <button id="sim">Sim!</button>
+    <button id="não" onmouseover="fuja()">Não</button>
+    <div id="mensagem">
+      <h2>💖 Eu te amo, minha princesa! 💖</h2>
+    </div>
+  </div>
+
+  <script>
+    // Função para fazer o botão "Não" fugir
+    function fuja() {
+      var botaonao = document.getElementById("não");
+      var largurajanela = window.innerWidth;
+      var alturaJanela = window.innerHeight;
+      var maxX = largurajanela - botaonao.offsetWidth;
+      var maxY = alturaJanela - botaonao.offsetHeight;
+      var x = Math.floor(Math.random() * (maxX + 1));
+      var y = Math.floor(Math.random() * (maxY + 1));
+      botaonao.style.left = x + "px";
+      botaonao.style.top = y + "px";
+    }
+
+    // Quando clicar em "Sim", mostra a mensagem
+    document.getElementById("sim").onclick = function () {
+      document.getElementById("mensagem").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
