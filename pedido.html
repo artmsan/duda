@@ -6,17 +6,22 @@
   <title>Dia Dos Namorados</title>
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-image: url('siteduda.jpg'); /* Sua imagem de fundo local */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-    }
+      body {
+    margin: 0;
+    padding: 0;
+    background-image: url('siteduda.jpg'); /* Imagem padrão (PC) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
 
+  @media (max-width: 768px) {
+    body {
+      background-image: url('fundo-celular.png'); /* Imagem para celular */
+ }
+  }
     .painel {
       background-color: white;
       margin: 30px auto;
